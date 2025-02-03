@@ -25,7 +25,7 @@ Before running the project locally, make sure you have the following installed:
 
 1. Clone the repository:
 
-   git clone https://github.com/Khaybee/HNG-0.git
+   git clone https://github.com/Khaybee/number-classification.git
 
    cd your-repo
 
