@@ -51,11 +51,17 @@ export function isPerfectNumber(num: number): boolean {
 }
 
 export function sumDigits(num: number) {
-    const sum = Math.abs(num)
+    const absoluteValue = Math.abs(num);
+    const sum = absoluteValue
         .toString()
         .split('')
         .reduce((sum, digit) => sum + +digit, 0);
 
-    const isEven = sum % 2 === 0;
-    return { sum, is_even: isEven, is_odd: !isEven };
+    // If the number is negative, we negate the sum
+    const finalSum = num < 0 ? -sum : sum;
+
+    const isEven = finalSum % 2 === 0;
+    const isOdd = !isEven;
+
+    return { sum: finalSum, is_even: isEven, is_odd: isOdd };
 }
