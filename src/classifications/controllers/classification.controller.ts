@@ -6,7 +6,7 @@ export const classifyNumberController = async (req: Request, res: Response): Pro
     const number = req.query.number;
 
     if (!number) {
-        return errorHandler(res, "Number is required", 400);
+        return errorHandler(res, "alphabet", 400);
     }
 
     const parsedNumber = parseInt(number as string, 10);

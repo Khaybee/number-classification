@@ -1,9 +1,9 @@
 import { Response, Request } from "express";
 
 
-export function errorHandler(res: Response, input: any, code: number = 400) {
+export function errorHandler(res: Response, input: any, code: number = 500) {
     res.status(code).json({
-      number: "alphabet",
+      number: input,
       error: true,
     })
   }
