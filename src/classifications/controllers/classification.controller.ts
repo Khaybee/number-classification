@@ -8,6 +8,10 @@ export const classifyNumberController = async (req: Request, res: Response): Pro
     if (!number) {
         return errorHandler(res, "alphabet", 400);
     }
+    
+    if (!/^\d+$/.test(number as string)) {
+        return errorHandler(res, number, 400);
+    }
 
     const parsedNumber = parseInt(number as string, 10);
 
