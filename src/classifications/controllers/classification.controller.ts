@@ -9,7 +9,7 @@ export const classifyNumberController = async (req: Request, res: Response): Pro
         return errorHandler(res, "alphabet", 400);
     }
     
-    if (!/^\d+$/.test(number as string)) {
+    if (!/^(-?\d+)$/.test(number as string)) {
         return errorHandler(res, number, 400);
     }
 
