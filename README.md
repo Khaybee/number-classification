@@ -36,15 +36,10 @@ json
 {
 
   "number": 371,
-
   "is_prime": false,
-
   "is_perfect": false,
-
   "properties": ["armstrong", "odd"],
-
   "digit_sum": 11,
-
   "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
 
 }
@@ -55,7 +50,6 @@ json
 {
 
   "number": "abc",
-
   "error": true
 
 }
@@ -67,7 +61,6 @@ json
 {
 
   "number": "Number is required",
-
   "error": true
 
 }
@@ -83,14 +76,13 @@ Ensure you have Node.js installed on your system. You can download it from nodej
 Clone the repository:
 
 git clone https://github.com/your-username/number-classification.git
-
 cd number-classification
 
-Install dependencies:
+# Install dependencies:
 
-npm install
+- npm install
 
-Start the server:
+## Start the server:
 
 npm start or npm run dev
 
@@ -100,21 +92,17 @@ Test the API
 
 You can test the API using a tool like Postman or simply through your browser. Example request:
 
-
 GET http://localhost:3000/api/classify-number?number=371
 
-Error Handling
+## Error Handling
 
 The API returns proper error responses for invalid inputs:
 
 400 Bad Request: When the number parameter is missing, or if the input is not a valid number.
-
 500 Internal Server Error: If something goes wrong while processing the request.
 
 Technologies Used
 
 Node.js: JavaScript runtime for building the API.
-
 Express.js: Web framework for Node.js.
-
 Axios: HTTP client to fetch fun facts from the Numbers API.
